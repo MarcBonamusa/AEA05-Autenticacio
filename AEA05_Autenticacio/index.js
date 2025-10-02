@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-   const {username, password} = req.body; //desestructurar del body lo que queremos usar
+   const {username, password} = req.body; //desestructurar del body lo que queremos usar.
    
 })
