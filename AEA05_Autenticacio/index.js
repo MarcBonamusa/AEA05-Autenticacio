@@ -1,5 +1,6 @@
 import express from "express";
 import { PORT, SECRET_JWT_KEY } from "./config.js";
+import { UserRepository } from "./user-repository.js";
 
 const app = express(); //crear el servidor
 
@@ -18,15 +19,15 @@ app.get('/', (req, res) => {
     res.render('register')
 });
 
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
    const {username, password} = req.body; //desestructurar del body lo que queremos usar.
    console.log(req.body)
    
    try {
-        //const id = await UserRepository.create({username, password})
+        const id = await UserRepository.create({username, password})
         res.send()
-   } catch {
-
+   } catch (error) {
+        res.status(400).send(error.message)
    }
 
 })

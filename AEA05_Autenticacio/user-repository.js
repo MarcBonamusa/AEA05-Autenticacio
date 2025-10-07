@@ -1,7 +1,7 @@
-import bcrypt from 'bcryptsjs'
+import bcrypt from 'bcryptjs'
 import DBLocal from 'db-local'
 import crypto from 'node:crypto'
-import { SALT_ROUNDS } from './config'
+import { SALT_ROUNDS } from './config.js'
 
 const {Schema} = new DBLocal({path: './db'}) // Conexio de la base de dades
 
