@@ -20,5 +20,13 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
    const {username, password} = req.body; //desestructurar del body lo que queremos usar.
+   console.log(req.body)
    
+   try {
+        //const id = await UserRepository.create({username, password})
+        res.send()
+   } catch {
+
+   }
+
 })
