@@ -1,1 +1,12 @@
-[{"_id":"13e2a026-ea3e-49aa-9ad1-1c78c81ae6c6","username":"GUILLERMO","password":"$2b$10$yPoBy3iihfiAwGeoP3mPZuycI.5z9TZu7VFNZKRUA8LEcPctljhmC"}]
+[
+  {
+    "_id": "f003b5e5-b871-472d-a29a-074293dbd876",
+    "username": "Daniel Alarcon",
+    "password": "$2b$10$g5e.DJZLwI0uSgjROBRDZOe/LbTjNyFcAopo9pKa/KesTE2bdXzvy"
+  },
+  {
+    "_id": "13e2a026-ea3e-49aa-9ad1-1c78c81ae6c6",
+    "username": "GUILLERMO",
+    "password": "$2b$10$yPoBy3iihfiAwGeoP3mPZuycI.5z9TZu7VFNZKRUA8LEcPctljhmC"
+  }
+]
