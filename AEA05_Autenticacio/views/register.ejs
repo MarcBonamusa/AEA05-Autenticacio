@@ -1,67 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and registration</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/js/register.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+        <% if (typeof username!='undefined' ) { %>
+            <div class="form-container">
+                <h2>Hola <%=username%>!</h2>
+                <p>Estas en el panel de admin</p>
+                <button id="close-session">Cerrar sesión</button>
+                <a href="/protected">Seguir administrando</a>
+            </div>
+        <% } %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <script src="register.js" defer></script>
-    <title>Document</title>
-</head>
+        <% if (typeof username==='undefined' ) { %>
+            <div class="form-container">
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" required>
 
-<body>
-    <form id="register-form">
-        <h2>Register</h2>
-        <label for="register-username">Username:</label>
-        <input type="text" id="register-username" name="username" required>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
 
-        <label for="register-password">Password</label>
-        <input type="password" id="register-password" name="password" required>
+                    <button type="submit">Login</button>
+                    <span>&nbsp;</span>
+                </form>
+            </div>
 
-        <label for="register-confirm-password">Password</label>
-        <input type="password" id="register-confirm-password" name="confirm-password" required>
+            <div class="form-container">
+                <form id="register-form">
+                    <h2>Register</h2>
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" name="username" required>
 
-        <button type="submit">Register</button>
-        <span>&nbsp;</span>
-    </form>
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
 
-    <script>
-        const $ = el => document.querySelector(el);
+                    <label for="register-confirm-password">Password</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required>
 
-        const registerForm = $('#register-form')
-        const registerSpan = $('#register-form span')
-
-        registerForm?.addEventListener('submit', e => {
-            e.preventDefault()
-            const username = $('#register-username').value
-            const password = $('#register-password').value
-            const confimrpassword = $('#register-confirm-password').value
-
-            if (password != confimrpassword) {
-                alert('Passwords do not match')
-                return
-            }
-            fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
-            })
-                .then(res => {
-                    console.log(res)
-                    if (res.ok) {
-                        registerSpan.innerText = 'Usuario registrado... Entrando...'
-                        registerSpan.style.color = 'blue'
-
-                    } else {
-                        registerSpan.innerText = 'Error al registrar usuari'
-                        registerSpan.style.color = 'red'
-                    }
-                });
-        });
-
-    </script>
-</body>
-
+                    <button type="submit">Register</button>
+                    <span>&nbsp;</span>
+                </form>
+            </div>
+            <% } %>
+    </div>
+    
+  </body>
 </html>

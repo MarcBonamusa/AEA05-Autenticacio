@@ -1,5 +1,15 @@
 [
   {
+    "_id": "6d408636-1be0-4c84-88c9-37b8fab33bc3",
+    "username": "ola",
+    "password": "$2b$10$sr8AeZhdgO/ULs9ReB9ueOIyQfsfDj/xeTo7dd9e6k2vQH3iaqwQm"
+  },
+  {
+    "_id": "24aa8a33-5d4e-4d90-95ea-eea20c1fb2c4",
+    "username": "Paco Porras",
+    "password": "$2b$10$yBoiwKrNM4V2W.POa5ADGOgRT5CLhg0L6nqvi5n4QjCvvRwZeRRXi"
+  },
+  {
     "_id": "8ed91691-3b69-44c2-9f4f-a95af54483bd",
     "username": "Danielmu06",
     "password": "$2b$10$jVU42Ss8Tmz.OjCHFlp2au948ASo28Nq0vtfT8fNBy1PiqspxWIsi"
