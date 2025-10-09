@@ -1,5 +1,15 @@
 [
   {
+    "_id": "8ed91691-3b69-44c2-9f4f-a95af54483bd",
+    "username": "Danielmu06",
+    "password": "$2b$10$jVU42Ss8Tmz.OjCHFlp2au948ASo28Nq0vtfT8fNBy1PiqspxWIsi"
+  },
+  {
+    "_id": "840e5490-58dc-40b7-bf02-e5c4208f3785",
+    "username": "Gemini11",
+    "password": "$2b$10$8bWSSIOS/cGHCm.JgqoAA.KhRVQam4xOftwxQ6G2G8HISMOlaETgC"
+  },
+  {
     "_id": "f003b5e5-b871-472d-a29a-074293dbd876",
     "username": "Daniel Alarcon",
     "password": "$2b$10$g5e.DJZLwI0uSgjROBRDZOe/LbTjNyFcAopo9pKa/KesTE2bdXzvy"

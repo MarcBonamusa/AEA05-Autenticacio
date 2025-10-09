@@ -1,10 +1,12 @@
 import express from "express";
 import { PORT, SECRET_JWT_KEY } from "./config.js";
 import { UserRepository } from "./user-repository.js";
+import cookieParser from "cookie-parser";
 
 const app = express(); //crear el servidor
 
-app.use(express.json());
+app.use(express.json()); // Recibe JSONs del frontend
+app.use(cookieParser()); // Habilita las cookies
 app.use(express.static("public"));// Carrega css
 
 app.set('view engine', 'ejs'); //Motor de plantillas
@@ -30,4 +32,8 @@ app.post('/register', async (req, res) => {
         res.status(400).send(error.message)
    }
 
+})
+
+app.get('/protected', (req, res) => {
+     res.render('protected')
 })
